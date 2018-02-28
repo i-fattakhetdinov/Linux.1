@@ -11,7 +11,7 @@ do
     shift
 done
 
-homeDirectory="."
+homeDirectory="${HOME}"
 
 if ! [ -d $dirName ]; then
     mkdir &>/dev/null $dirName
@@ -33,7 +33,7 @@ do
             num=$(($num+1))
             newName=$(echo "$dirName/$name($num)")
         done
-        cp $file $newName
+        cp &>/dev/null $file $newName
     done
 done
 
